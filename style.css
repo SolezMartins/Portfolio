@@ -1,0 +1,231 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #a78bfa;
+}
+
+/* Dark Mode Button */
+#dark-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#dark-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease;
+}
+
+.hero span {
+  color: #facc15;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  color: #4f46e5;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #facc15;
+  color: #222;
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #4f46e5;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Projects */
+.work .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #4f46e5;
+}
+
+.project-card p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Contact */
+.contact a {
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #9333ea;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Reveal active class */
+.reveal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark header {
+  background: #111;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #111827, #312e81);
+}
+
+body.dark .project-card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark footer {
+  background: #111;
+}
